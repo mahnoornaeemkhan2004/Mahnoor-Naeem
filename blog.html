@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>our Blog-love and lace Event</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Courgette&display=swap" rel="stylesheet">
+    <!-- font awesome libraries  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <!-- style CSS -->
+    <style>
+      *{
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+          font-family: sans-serif;
+        }
+       /* Header styles */
+       header {
+         display: flex;
+         justify-content: space-between;
+         align-items: center;
+         padding-top: 114px;
+         padding-bottom: 28px;
+        /* padding: 28px 0 ; */
+        }
+        
+        .header{    
+          display: flex;
+          align-items: center;
+        }
+       
+
+       .header-left i{
+         width: 30px;
+         margin-right: 10px;
+         margin-left: 5px;
+        }
+
+       .header-right i {
+         width: 30px;
+         margin-right: 37px;
+         margin-left: 3px;
+        }
+
+        .header-left h2{
+          margin-left: 46px;
+          font-size: 16px;
+          color: rgb(146, 139, 132);
+          font-weight: 400;
+          font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+        .header-right h2 {
+          margin-right: 32px;
+          font-size: 16px;
+          color: rgb(146, 139, 132);
+          font-weight: 400;
+          font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+
+        .header-center {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .header-center h1 {
+            margin-top: 2px;
+            color: black;
+          /* margin-bottom: 2px; */
+            font-weight: 400;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            font-size: 26px;
+        }
+
+        #event {
+          color: #CCB9A8;
+          font-family: "Courgette", cursive;
+
+        }
+
+        .header-center img {
+          width: 240px; 
+          margin: 0 auto;
+          height: 50px;
+        }
+
+        .services-description {
+          font-size: 15px;
+          margin-bottom: 20px;
+          color: #CAB7A6;
+          font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }       
+       
+
+        /* Navbar styles */
+        .navbar {
+          background-color: #CAB7A6;
+          text-align: center;
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100%;
+          z-index: 1000; 
+        }
+   
+
+       .navbar ul {
+          list-style: none;
+          padding: 5px;
+          /* position: relative; */
+        }
+
+        .navbar li {
+          display: inline;
+          /* text-align: center; */
+        }
+
+        .navbar a {
+          display: inline-block;
+          color: white;
+          text-decoration: none;
+          padding: 14px 20px;
+          font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+          font-size: 20px;
+        }
+        nav div{
+            color: white;
+            font-size: 30px;
+            float: right;
+            line-height: 40px;
+            margin-right: 40px;
+            cursor: pointer;
+            display: none;
+        }
+
+        .navbar a:hover {
+          border: 2px solid white;
+          background-color: #A3AD70;
+          color: white;
+          font-family: "Courgette", cursive;
+        }
+        .hamburger {
+            display: block;
+            color: white;
+        }
+
+        /* blog style */
+
+        .blog-container{
+          min-height: 8vh;
+          width: 100%;
+        }
+
+        .blog-Event{
+          padding: 4% 5%; 
+          background-color: #bac584;
+        }
+
+        .blog{
+          display: flex;
+          flex-direction: column;
+          align-items: center; 
+        }
+
+
+        h1{
+          color: #fff;
+
+          font-size: 4rem;
+          -webkit-text-stroke-width: 2px;
+          -webkit-text-stroke-color: transparent;
+          
+           font-family: "Courgette", cursive;;
+           font-weight: 400;
+
+          
+          position: relative;
+        }
+        /* .blog h1{
+            color: white ;
+        } */
+
+        #blogs{
+          padding: 150px 150px 0 150px;
+          
+        }
+
+        #blogs .blog-box{
+          display: flex;
+          align-items: center;
+          width: 100%;
+          position: relative;
+          padding-bottom: 9px;
+        }
+
+        #blogs .blog-img{
+          width: 50%;
+          margin-right: 40px;
+        }
+
+        #blogs img{
+          width: 100%;
+          height: 300px;
+          object-fit: cover;
+        }
+        
+        #blogs .blog-details{
+          width: 50%;
+        } 
+
+        #blogs .blog-details a{
+          text-decoration: none;
+          font-size: 11px;
+          color: rgb(18, 177, 39);
+          font-weight: 700;
+        }
+        
+        #blogs .blog-details a:hover{
+          color: rgb(140, 233, 156);
+        }
+        
+        /* Footer styles */
+        footer {
+          color: #333;
+          background-color: white;
+          text-align: center;
+          padding: 35px 0;
+          width: 100%;
+          bottom: 0;      
+        }
+        
+        footer p{
+          margin-bottom:20px;
+        }
+        
+        @media (max-width: 768px) {
+            .navbar ul {
+                display: none;
+                position: absolute;
+                top: 70px;
+                background-color: #CAB7A6;
+                width: 100%;
+                text-align: center;
+            }
+
+            .navbar ul.active {
+                display: block;
+            }
+
+            .navbar li {
+                display: block;
+            }
+
+            .hamburger {
+                display: block;
+                color: white;
+            }
+            #blogs{
+              padding: 100px 20px 0 20px ;
+            }
+            #blogs .blog-box{
+              display: flex;
+              flex-direction: column;
+              align-items: flex-start;
+              
+            }
+            #blogs .blog-img{
+              width: 350px;
+              margin-right: 0px;
+              margin-bottom: 30px;
+            }
+            #blogs img{
+              width: 100%;
+            }
+            #blogs .blog-details{
+              width: 100%;
+            }
+          }
+    </style>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="hamburger">&#9776;</div>
+     <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="features.html">Features</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="Service.html">Services</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="blog.html" style="border:2px solid white; background-color: #A3AD70;" >Our Blog</a></li>
+        <li><a href="#">Shop</a></li>
+     
+      </ul>
+      <!-- <div class="hamburger">&#9776;</div> -->
+  </nav>       
+         
+        
+  <header>
+    <div class="header-left">
+      <h2>Call Us:</h2>
+      <i class="fa fa-phone " style="font-size:60px;color:#A3AD70;"></i>
+   
+    </div>
+
+    <div class="header-center">
+      <div><h1>LOVE <span id="event">AND</span>  LACE <span id="event">Event</span></h1></div>
+      <img src="./img/head.1.png" alt="Logo"width="100">
+      <p class="services-description">WELCOME</p>
+    </div>
+
+    <div class="header-right">
+      <i class="fa fa-shopping-bag" style="font-size:60px;color:#A3AD70;"></i>   
+      <h2>Your Cart:</h2>
+    </div>
+
+  </header>
+
+  <!-- blog section start -->
+   <div class="blog-container">
+       <div class="blog-Event">
+           <div class="blog">
+              <h1>Our Blog</h1>
+           </div>
+       </div>
+    </div>
+
+  <section id="blogs">
+       <div class="blog-box">
+           <div class="blog-img">
+              <img src="./img/blog.1.jpeg">
+           </div> 
+
+           <div class="blog-details">
+              <h4>Event photoshoot</h4>
+              <p>Whether you're the engaged couple or the Event photographer, this guide to the best pre-Event photoshoot ideas, tips and poses is a must-read.</p>
+              <a href="#">CONTINUE READING</a>
+          </div>
+      </div>
+
+      <div class="blog-box">
+           <div class="blog-img">
+              <img src="./img/blog.2.jpeg">
+           </div> 
+    
+           <div class="blog-details">
+              <h4>Event photoshoot</h4>
+              <p>This is beneficial for both because most couples haven’t experienced a professional photo shoot before this moment. So, this gives them the chance to ask all the questions they have about what they can expect.</p>
+              <a href="#">CONTINUE READING</a>
+          </div>
+       </div>
+    
+       <div class="blog-box">
+        <div class="blog-img">
+          <img src="./img/blog.3.jpeg">
+        </div> 
+        <div class="blog-details">
+          <h4>Event photoshoot</h4>
+          <p>Event photographer, it’s also essential to get an idea of what they have in mind, learn about their personality and their love story. This way, it’s easier to plan a unique pre-Event shoot that really represents the couple.</p>
+          <a href="#">CONTINUE READING</a>
+        </div>
+     </div>
+  </section>
+    
+
+  <!-- footer -->
+  <footer>
+    <p>"Making Every Moment Magical"</p>
+    <p>&copy; 2024  <span id="event">LOVE AND LACE EVENT</span> . All rights reserved.</p>
+
+  </footer>  
+  <script>
+   // humburger menu
+   document.querySelector('.hamburger').addEventListener('click', function() {
+      document.querySelector('.navbar ul').classList.toggle('active');});
+  </script>
+  
+ </body>
+ 
+</html>

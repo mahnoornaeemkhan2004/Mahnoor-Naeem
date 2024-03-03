@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feature-love and lace Event</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Courgette&display=swap" rel="stylesheet">
+    <style>
+            
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Global styles */
+        body {
+            font-family: Arial, sans-serif;
+            position: relative;
+        }
+
+        /* Header styles */
+        header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 114px;
+    padding-bottom: 28px;
+    /* padding: 28px 0 ; */
+  
+  
+}
+
+
+.header-left,
+.header-center,
+.header-right {
+    display: flex;
+    align-items: center;
+}
+
+.header-left i{
+    width: 30px;
+    margin-right: 10px;
+    margin-left: 5px;
+   
+}
+
+
+.header-right i {
+    width: 30px;
+    margin-right: 37px;
+    margin-left: 3px;
+}
+
+.header-left h2{
+    margin-left: 46px;
+    font-size: 16px;
+    color: rgb(146, 139, 132);
+    font-weight: 400;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.header-right h2 {
+    margin-right: 32px;
+    font-size: 16px;
+    color: rgb(146, 139, 132);
+    font-weight: 400;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    
+}
+
+
+.header-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.header-center h1 {
+    margin-bottom: 2px;
+    font-weight: 400;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 26px;
+ 
+
+}
+#event {
+            color: #CCB9A8;
+            font-family: "Courgette", cursive;
+
+        }
+
+.header-center img {
+    width: 240px; 
+    margin: 0 auto;
+    height: 50px;
+  
+  
+}
+.services-description {
+            
+            font-size: 15px;
+            margin-bottom: 20px;
+            color: #CAB7A6;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}       
+       
+
+        /* Navbar styles */
+.navbar {
+    background-color: #CAB7A6;
+    text-align: center;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; 
+ }
+
+.navbar ul {
+    list-style: none;
+    padding: 5px;
+    }
+
+.navbar li {
+    display: inline;
+}
+
+.navbar a {
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+    padding: 14px 20px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 20px;
+
+}
+
+.navbar a:hover {
+    border: 2px solid white;
+    background-color: #A3AD70;
+    color: white;
+    font-family: "Courgette", cursive;
+}
+ /* Hamburger menu styles */
+ .hamburger {
+            display: none;
+            cursor: pointer;
+        }
+ /* Section 1 styles */
+.section1 {
+           padding-top: 80px;
+            
+            background-size: cover;
+            background-position: center;
+            height: 500px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            transition: background-image 1s ease-in-out;
+}
+.section1 h1{
+    font-family: "Courgette", cursive;
+            font-weight: 200;
+            color: white;
+            font-size: 55px;
+}
+/* section2 styleling */
+.section2 {
+    /* padding-top: 80px; */
+    margin-bottom: 30px;
+    background-size: cover;
+    background-position: center;
+    
+    padding: 100px 0;
+    color: black;
+}
+.section2 h2{
+    margin-bottom: 60px;
+    font-size: 40px;
+    font-weight: 400;
+    font-family: "Courgette", cursive;;
+
+}
+.section2 p{
+  font-size: 14px;
+  line-height: 23px;
+  color: rgb(146, 139, 132);
+
+
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.content {
+    width: 45%;
+}
+
+.image-container {
+    width: 45%;
+    position: relative;
+}
+
+.image-container img {
+    width: 89%;
+    border-radius: 10px;
+}
+ /* Footer styles */
+ footer {
+    /* margin-top: 30px; */
+    color: #333;
+    background-color: white;
+    text-align: center;
+    padding: 35px 0;
+    width: 100%;
+    bottom: 0;      
+}
+footer p{
+     margin-bottom: 10px;
+}  
+/* Responsive styles */
+@media screen and (max-width: 768px) {
+    header {
+        flex-direction: column;
+        padding: 55px 20px 20px 20px; 
+    }
+
+    .header-left,
+    .header-right,
+    .header-center {
+        margin-bottom: 20px; 
+    }
+
+    .header-left,
+    .header-right {
+        text-align: center;
+    }
+
+   
+
+    .section1,
+    .section2,
+    .section {
+        padding: 60px 20px; 
+    }
+    .navbar ul {
+                display: none;
+                position: absolute;
+                top: 70px;
+                background-color: #CAB7A6;
+                width: 100%;
+                text-align: center;
+            }
+
+            .navbar ul.active {
+                display: block;
+            }
+
+            .navbar li {
+                display: block;
+            }
+
+            .hamburger {
+                display: block;
+                color: white;
+            }
+}
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="hamburger">&#9776;</div>
+        <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="features.html" style="border:2px solid white; background-color: #A3AD70;">Features</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="blog.html" >Our Blog</a></li>
+        <li><a href="#">Shop</a></li>
+     
+       
+        </ul>
+        </nav>       
+        
+        <header>
+        <div class="header-left">
+            <h2>Call Us:</h2>
+        <i class="fa fa-phone " style="font-size:60px;color:#A3AD70;"></i>
+        <!-- <h2>Call Us:</h2> -->
+        </div>
+        <div class="header-center">
+        <div><h1>LOVE <span id="event">AND</span>  LACE <span id="event">Event</span></h1></div>
+        <img src="picture/th4.png" alt="Logo"width="100">
+                
+        <p class="services-description">WELCOME</p>
+        </div>
+        <div class="header-right">
+        <!-- <h2>Your Cart:</h2>   -->
+        <i class="fa fa-shopping-bag" style="font-size:60px;color:#A3AD70;"></i>   
+        <h2>Your Cart:</h2>
+        </div>
+        </header>
+        
+       
+        <section class="section1">
+        <h1>Our Feature ...</h1>
+        </section>
+
+
+        <section class="section2">
+            <div class="container">
+                <div class="image-container">
+                    <img src="picture/th10.jpg" alt="Initial Image" id="image-change">
+                    </div>
+                <div class="content">
+                <h2>"Let us turn your dreams into reality,
+                     one event at a time."
+                </h2>
+                <p>Company was established in 1912 and has been family owned for close to twenty
+                     years and has always been proud to serve the area with the freshest flowers.
+                      Our unique designs and helpful service have always put us a cut above the
+                       rest. We are continuously looking to bring fresh ideas to our customers.
+
+                </p>
+                </div>
+             </div>
+            </section>
+
+
+            <hr style="margin-bottom:100px ;">
+
+
+            <section >
+                <div class="header-center">
+                <div><h1>LOVE <span id="event">AND</span>  LACE <span id="event">Event</span></h1></div>
+                <img src="picture/th4.png" alt="Logo"width="100">
+                <p class="services-description">Event Management</p>
+            </div>
+            </section>
+
+
+            <hr style="margin-top:70px ;">
+
+
+            <footer>
+                <p>"Making Every Moment Magical"</p>
+                <p>&copy; 2024  <span id="event">LOVE AND LACE EVENT</span> . All rights reserved.</p>
+                
+            </footer>
+            
+        <script>
+            // for change background
+            // Array of background image URLs
+            const images = [
+                'picture/th8.jpg',
+                'picture/th2.JPG',
+                'picture/th9.jpg',
+             ];
+        function changeBackground() {
+                const section = document.querySelector('.section1');
+                const randomIndex = Math.floor(Math.random() * images.length);
+                section.style.backgroundImage = `url('${images[randomIndex]}')`;
+            }
+        setInterval(changeBackground, 2000);
+
+
+         // humburger menu
+         document.querySelector('.hamburger').addEventListener('click', function() {
+      document.querySelector('.navbar ul').classList.toggle('active');
+    });
+</script> 
+</body>
+</html>

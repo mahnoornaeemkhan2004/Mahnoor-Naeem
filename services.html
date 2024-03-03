@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services-love and lace Event</title>
+  
+    <!-- font awesome libraries  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <!-- style CSS -->
+    <style>
+
+        *{
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+          font-family: sans-serif;
+        }
+
+        /* Header styles */
+        header {
+         display: flex;
+         justify-content: space-between;
+         align-items: center;
+         padding-top: 100px;
+         padding-bottom: 28px;
+        /* padding: 28px 0 ; */
+        }
+        
+        .header {
+          display: flex;
+         align-items: center;
+        }
+       
+
+       .header-left i{
+         width: 30px;
+         margin-right: 10px;
+         margin-left: 5px;
+        }
+
+       .header-right i {
+         width: 30px;
+         margin-right: 37px;
+         margin-left: 3px;
+        }
+
+        .header-left h2{
+          margin-left: 46px;
+          font-size: 16px;
+          color: rgb(146, 139, 132);
+          font-weight: 400;
+          font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+        .header-right h2 {
+          margin-right: 32px;
+          font-size: 16px;
+          color: rgb(146, 139, 132);
+          font-weight: 400;
+         font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+
+        .header-center {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+        }
+
+        .header-center h1 {
+          margin-bottom: 2px;
+          font-weight: 400;
+          font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+          font-size: 26px;
+        }
+
+        #event {
+             color: #CCB9A8;;
+            /* color: rgb(37, 54, 40); */
+            font-family: "Courgette", cursive;
+
+        }
+
+        .header-center img {
+          width: 240px; 
+          margin: 0 auto;
+          height: 50px;
+        }
+
+        .services-description {
+            
+            font-size: 15px;
+            margin-bottom: 20px;
+            color: #CAB7A6;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }       
+       
+
+        /* Navbar styles */
+        .navbar {
+           background-color: #CAB7A6;
+           text-align: center;
+           position: fixed;
+           top: 0;
+           left: 0;
+           width: 100%;
+           z-index: 1000; 
+        }
+   
+
+       .navbar ul {
+          list-style: none;
+          padding: 5px;
+          position: relative;
+        }
+
+        .navbar li {
+           display: inline;
+           text-align: center;
+        }
+
+        .navbar a {
+           display: inline-block;
+           color: white;
+           text-decoration: none;
+           padding: 14px 20px;
+           font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+           font-size: 20px;
+        }
+
+        .navbar a:hover {
+          border: 2px solid white;
+          background-color: #A3AD70;
+          color: white;
+          font-family: "Courgette", cursive;
+        }
+        nav div{
+            color: white;
+            font-size: 30px;
+            float: right;
+            line-height: 40px;
+            margin-right: 40px;
+            cursor: pointer;
+            display: none;
+        }
+        .hamburger {
+            display: block;
+            color: white;
+        }
+      
+        /* service style */
+
+        .container{
+            min-height: 100vh;
+            width: 100%;
+          
+            background-image: url(./img/wp6280733.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .service-wrepper{
+           padding: 5% 8%; 
+        }
+
+        .service{
+           display: flex;
+           flex-direction: column;
+           align-items: center;
+        }
+
+        h1{
+           color: #fff;
+           font-size: 5rem;
+           -webkit-text-stroke-width: 2px;
+           -webkit-text-stroke-color: transparent;
+         
+           background-color: rgb(18, 177, 39);
+           background-clip: text;
+           -webkit-text-fill-color: transparent;
+           position: relative;
+        }
+
+        .box-shadow{
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            gap: 30px;
+            margin-top: 80px;
+        }
+
+        .box{
+            height: 350px;
+            width: 370px;
+            background-image: url(/img/background.7.jpeg);
+            background-size: cover;
+            background-repeat: no-repeat;
+
+            padding: 3% 8%;
+            border: 0.2px solid rgba(114, 226, 174,0.2);
+            border-radius: 8px;
+            transition: .6s;
+            display: flex;
+            text-align: center;
+            flex-direction: column;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .box i{
+            color: rgb(18, 177, 39);
+            margin-top: 30px;
+            margin-bottom: 20px;
+            font-size: 4.8rem;
+        }
+
+        .box h2{
+            color: black;
+            font-size: 30px;
+            font-weight: 600;
+            letter-spacing: 3px;
+        }
+
+        .box p{
+            text-align: center;
+            font-size: 20px;
+            width: 100%;
+            margin: 12px 0;
+            color: #171718;
+        }
+
+        .box:hover{
+            background-color: transparent;
+            transform: translateY(-8px);
+            border-color: rgb(18, 177, 39);
+        }
+
+        .box:hover i{
+            color: rgb(82, 194, 101);
+        }
+
+        /* Footer styles */
+        footer {
+           color: #333;
+           background-color: white;
+           text-align: center;
+           padding: 35px 0;
+           width: 100%;
+           bottom: 0;      
+        }
+        
+        footer p{
+           margin-bottom: 20px;
+        }
+
+        
+        @media screen and (max-width:1200px) {
+            .box-shadow{
+                grid-template-columns: repeat(2,1fr);
+            }
+         @media screen and (max-width:900px) {
+            .navbar ul {
+                display: none;
+                position: absolute;
+                top: 70px;
+                background-color: #CAB7A6;
+                width: 100%;
+                text-align: center;
+            }
+
+            .navbar ul.active {
+                display: block;
+            }
+
+            .navbar li {
+                display: block;
+            }
+
+            .hamburger {
+                display: block;
+                color: white;
+            }
+            .box-shadow{
+                grid-template-columns: repeat(1,1fr);
+            }
+            
+            h1{
+                font-size: 3.5rem;
+            }
+         }   
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="hamburger">&#9776;</div>
+        <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="features.html">Features</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="Service.html" style="border:2px solid white; background-color: #A3AD70;">Services</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="blog.html">Our Blog</a></li>
+        <li><a href="#">Shop</a></li>
+     
+        </ul>
+      
+    </nav>       
+         
+        
+    <header>
+    <div class="header-left">
+        <h2>Call Us:</h2>
+    <i class="fa fa-phone " style="font-size:60px;color:#A3AD70;"></i>
+   
+    </div>
+    <div class="header-center">
+    <div><h1>LOVE <span id="event">AND</span>  LACE <span id="event">Event</span></h1></div>
+    <img src="./img/head.1.png" alt="Logo"width="100">
+            
+    <p class="services-description">WELCOME</p>
+    </div>
+    <div class="header-right">
+   
+    <i class="fa fa-shopping-bag" style="font-size:60px;color:#A3AD70;"></i>   
+    <h2>Your Cart:</h2>
+    </div>
+    </header>
+
+    <!-- Service section start -->
+
+    <div class="container">
+        <div class="service-wrepper">
+            <div class="service">
+                <h1>Our Service</h1>
+                <div class="box-shadow">
+                    <div class="box">
+                       <i class="fas fa-map-marker-alt"></i>
+                       <h2>Venu selection</h2>
+                       <p>The venue's location and accessibility, available amenities and services, costs and budget.</p>
+                    </div>
+
+                    <div class="box">
+                        <i class="fas fa-envelope"></i>
+                        <h2>Invitation box</h2>
+                        <p>The purpose of invitation should be clear. The name of the honoree must be mentioned</p>
+                    </div>
+        
+                    <div class="box">
+                        <i class="fas fa-music"></i>
+                        <h2>Entertainment</h2>
+                        <p>Classical musicians never fail to impress with their timeless elegance. Whether it be for your ceremony entrance or your relaxed reception</p>
+                    </div>
+
+                    <div class="box">
+                        <i class="fas fa-utensils"></i>
+                        <h2>Food and Drink</h2>
+                        <p>Traditional food pairing can be achieved across all drinks categories including wine, beer and soft drinks</p>
+                    </div>
+        
+                    <div class="box">
+                        <i class="fas fa-photo-video"></i>
+                        <h2>Photography</h2>
+                        <p>Fine art photography is to do with capturing the elements of the wedding in not-so-basic frames.</p>
+                    </div>
+        
+                    <div class="box">
+                        <i class="fas fa-birthday-cake"></i>
+                        <h2>Custom food</h2>
+                        <p>A buffet is the best wedding catering option for guests with a big appetite. It is also more affordable and laid back than a plated dinner.</p>
+                    </div>
+        
+                </div>
+            </div>
+        </div>
+    </div>
+     
+    <!-- footer -->
+    <footer>
+        <p>"Making Every Moment Magical"</p>
+        <p>&copy; 2024  <span id="event">LOVE AND LACE EVENT</span> . All rights reserved.</p>
+
+    </footer>
+    <script>
+      // humburger menu
+      document.querySelector('.hamburger').addEventListener('click', function() {
+      document.querySelector('.navbar ul').classList.toggle('active');});
+  </script>
+</body>
+</html>

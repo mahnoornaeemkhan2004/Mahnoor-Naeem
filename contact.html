@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <title>Contact-love and lace Event</title>
+    <style>
+      .contact form {
+        padding: 1.5rem;
+        
+        background-image: url(picture/th.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        border-radius: 3.5rem;
+        box-shadow: 0 0.5 1rem rgba(0, 0, 0, 0.9);
+        text-align: center;
+      }
+      .contact form .inputBox {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+      }
+      .contact form .inputBox input,
+      .contact form textarea {
+        border: 0.8rem solid rgb(133, 190, 52);
+        border-radius: 20%;
+        font-size: 1.3rem;
+        padding: 1rem;
+        margin: 1rem 0;
+        text-transform: none;
+        color: #333;
+      }
+      .contact form .inputBox input {
+        width: 40%;
+      }
+      .contact form textarea {
+        height: 5rem;
+        width: 90%;
+        resize: none;
+      }
+      .contact form .inputBox input::placeholder,
+      .contact form textarea::placeholder {
+        text-transform: none;
+      }
+      .contact form .inputBox input:focus,
+      .contact form textarea:focus {
+        border-color: rgb(226, 177, 31);
+      }
+      .heading h1 {
+        font-size: 2.8rem;
+        color: rgb(185, 146, 40);
+        font-family: "Courgette", cursive;
+      }
+      .heading h2 {
+        font-size: 1.8rem;
+        color: rgb(86, 166, 63);
+        font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+      }
+      .btn {
+        font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+        font-size: 18px;
+        font-weight: bold;
+        background-color: rgb(133, 190, 52);
+        width: 150px;
+        padding: 20px;
+        color: #fff;
+        border: 0.8rem;
+        border-radius: 20%;
+        text-align: center;
+      }
+      .btn:hover {
+        background-color: rgb(226, 177, 31);
+      }
+      /* Header styles */
+      header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 114px;
+        padding-bottom: 28px;
+        /* padding: 28px 0 ; */
+      }
+
+      .header-left,
+      .header-center,
+      .header-right {
+        display: flex;
+        align-items: center;
+      }
+
+      .header-left i {
+        width: 30px;
+        margin-right: 10px;
+        margin-left: 5px;
+      }
+
+      .header-right i {
+        width: 30px;
+        margin-right: 37px;
+        margin-left: 3px;
+      }
+
+      .header-left h2 {
+        margin-left: 46px;
+        font-size: 16px;
+        color: rgb(146, 139, 132);
+        font-weight: 400;
+        font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+      }
+      .header-right h2 {
+        margin-right: 32px;
+        font-size: 16px;
+        color: rgb(146, 139, 132);
+        font-weight: 400;
+        font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+      }
+
+      .header-center {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .header-center h1 {
+        margin-bottom: 2px;
+        font-weight: 400;
+        font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+        font-size: 26px;
+      }
+      #event {
+        color: #ccb9a8;
+        font-family: "Courgette", cursive;
+      }
+
+      .header-center img {
+        width: 240px;
+        margin: 0 auto;
+        height: 50px;
+      }
+      .services-description {
+        font-size: 15px;
+        margin-bottom: 20px;
+        color: #cab7a6;
+        font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+      }
+
+      /* Navbar styles */
+      .navbar {
+        justify-content: space-between;
+        background-color: #cab7a6;
+        text-align: center;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+      }
+
+      .menu {
+        display: block;
+        list-style-type: none;
+        padding: 0;
+      }
+
+      .menu li {
+        display: inline;
+        text-align: center;
+      }
+
+      .menu a {
+        display: inline-block;
+        color: white;
+        text-decoration: none;
+        padding: 14px 20px;
+        font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+        font-size: 20px;
+      }
+
+      .menu a:hover {
+        border: 2px solid white;
+        background-color: #a3ad70;
+        color: white;
+        text-decoration: underline;
+      }
+      .toggle-btn {
+        display: none;
+      }
+      /* Footer styles */
+      footer {
+        color: #333;
+        background-color: white;
+        text-align: center;
+        padding: 35px 0;
+        width: 100%;
+        bottom: 0;
+      }
+      footer p {
+        margin-bottom: 20px;
+      }
+      /* media querry */
+      @media (max-width: 750px) {
+        header {
+          flex-direction: column;
+          padding: 55px 20px 20px 20px;
+        }
+
+        .header-left,
+        .header-right,
+        .header-center {
+          margin-bottom: 20px;
+        }
+
+        .header-left,
+        .header-right {
+          text-align: center;
+        }
+        .navbar {
+          display: block;
+        }
+        .menu {
+          display: none;
+        }
+        .toggle-btn {
+          background-color: #cab7a6;
+          color: white;
+          border: none;
+          font-size: 20px;
+          cursor: pointer;
+          display: block;
+          flex-direction: column;
+        }
+        .menu {
+          position: fixed;
+          width: 100%;
+          height: 60vh;
+          background-color: #9d8774;
+          text-align: center;
+        }
+        .menu li {
+          display: block;
+        }
+        .menu li a {
+          font-size: 20px;
+        }
+        .menu a:hover {
+          background: none;
+          background-color: #936e4d84;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- header Section -->
+    <nav class="navbar">
+      <button class="toggle-btn" onclick="toggleMenu()">☰</button>
+      <ul class="menu">
+        <li><a href="index.html">Home</a></li>
+        <li>
+          <a href="features.html">Features</a>
+        </li>
+        <li><a href="./about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="./contact.html">Contact</a></li>
+        <li><a href="blog.html">Our Blog</a></li>
+        <li><a href="#">Shop</a></li>
+      </ul>
+    </nav>
+
+    <header>
+      <div class="header-left">
+        <h2>Call Us:</h2>
+        <i class="fa fa-phone" style="font-size: 60px; color: #a3ad70"></i>
+      </div>
+      <div class="header-center">
+        <div>
+          <h1>
+            LOVE <span id="event">AND</span> LACE <span id="event">Event</span>
+          </h1>
+        </div>
+        <img src="picture/th4.png" alt="Logo" width="100" />
+
+        <p class="services-description">WELCOME</p>
+      </div>
+      <div class="header-right">
+        <i
+          class="fa fa-shopping-bag"
+          style="font-size: 60px; color: #a3ad70"
+        ></i>
+        <h2>Your Cart:</h2>
+      </div>
+    </header>
+    <!-- contact section star -->
+    <section class="contact" id="contact">
+      <div class="heading">
+        <h1 align="center">Give Us a Feedback</h1>
+        <h2 align="center">Contact Us</h2>
+      </div>
+      <form id="form">
+        <div class="inputBox">
+          <input type="text" placeholder="Your Name" id="username" required />
+          <input type="email" placeholder="Your Email" id="email" required />
+        </div>
+        <div class="inputBox">
+          <input type="tel" placeholder="Your Number" id="phone" required />
+          <input type="text" placeholder="Your Address" id="address" required />
+        </div>
+        <textarea
+          placeholder="Say Something"
+          id="message"
+          cols="30"
+          rows="10"
+          required
+        ></textarea>
+        <input type="submit" value="Send Message" class="btn" />
+      </form>
+    </section>
+
+    <!-- contact section end -->
+    <!-- footer section  -->
+    <footer>
+      <p>"Making Every Moment Magical"</p>
+      <p>
+        &copy; 2024 <span id="event">LOVE AND LACE EVENT</span> . All rights
+        reserved.
+      </p>
+    </footer>
+    <script>
+      // form section
+      //
+      const submit = (event) => {
+        console.log("event", event);
+        event.preventDefault();
+        const username = document.getElementById("username");
+        const email = document.getElementById("email");
+        const phone = document.getElementById("phone");
+        const address = document.getElementById("address");
+        const message = document.getElementById("message");
+      };
+
+      document.getElementById("form").addEventListener("submit", (event) => {
+        console.log("event", event);
+        event.preventDefault();
+        // const username = document.getElementById("username");
+        // const usernameValue = username.value
+
+        const usernameValue = document.getElementById("username").value;
+        const emailValue = document.getElementById("email").value;
+        const phoneValue = document.getElementById("phone").value;
+        const addressValue = document.getElementById("address").value;
+        const messageValue = document.getElementById("message").value;
+
+        console.log({
+          usernameValue,
+          emailValue,
+          phoneValue,
+          addressValue,
+          messageValue,
+        });
+      });
+      function toggleMenu() {
+        var menu = document.querySelector(".menu");
+        if (menu.style.display === "none") {
+          menu.style.display = "block";
+        } else {
+          menu.style.display = "none";
+        }
+      }
+    </script>
+  </body>
+</html>
